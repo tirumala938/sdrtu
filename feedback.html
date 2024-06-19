@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form with Star Rating</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+          
+            <div class="form-group">
+                <label>Rating:</label>
+                <div class="star-rating" id="rating">
+                    <span data-value="1">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="5">&#9733;</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="feedbackList">
+            <h2>Previous Feedback</h2>
+            <ul id="feedbackItems"></ul>
+        </div>
+        <div id="averageRating">
+            <h2>Average Rating: <span id="avgRating">0</span></h2>
+        </div>
+    </div>
+    <script src="abhi.js"></script>
+</body>
+</html>
